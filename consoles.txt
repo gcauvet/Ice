@@ -1,100 +1,83 @@
-#
-# Specifies the consoles for Ice to manage. Each console will have a ROMs folder
-# created for it, and can have their games added to Steam.
-#
-# To add a new console, make a new entry following this format:
-#
-# [*Console Name*]
-# option=value
-#
-# The *Console Name* is used as the Steam category for your Console. The options
-# are extra information for Ice to use about the console. The only one that is
-# necessary is 'emulator'. A full list of available options are as follows:
-#
-# Emulator: The emulator used to launch these games. This should be the name of
-#   an entry in emulators.txt.
-#
-# Nickname: *optional* A short, distinct name for the console. Used as the
-#   folder name for the default ROMs directory. If none is given, the full name
-#   of the console is used. This is not recommended, as ConsoleGrid uses
-#   the nickname as a hint to which console it should search for games in.
-#
-# Extensions: *optional* A (comma separated) list of file extensions to assume
-#   are ROMs. For example, if the value was set to 'sfc, smc' then only files
-#   that ended with '.sfc' or '.smc' will be added to Steam. If not provided,
-#   Ice will add every file in the ROMs directory to Steam.
-#
-# ROMs Directory: *optional* If given a path, Ice will look in the specified
-#   directory for ROMs (instead of the one it generates).
-#
-# Prefix: *optional* Text to append to the name of every game for the console.
-#   The name of the game as it appears in Steam will be 
-#   "*Prefix* *ROM filename*". This is useful if you want to organize your Steam
-#   library in a way other than categories (for example, using the prefix
-#   '[NES]', or 'NES -')
-#
-# Icon: *optional* A path to an icon file to display for every game in the
-#   console. If none is provided, the icon of the emulator is used.
-#
-# Images Directory: *optional* A path to a directory to search for Grid Images.
-#   If an image is found in this directory with the same name as the ROM, it is
-#   set as the Steam Grid Image instead of one downloaded from ConsoleGrid.
-#
-# For example, a possible configuration (using all options) might look like this:
-#
-# [Super Nintendo]
-# nickname=SNES
-# emulator=ZSNES
-# extensions=sfc, smc
-# roms directory=C:\Games\Super Nintendo\ROMs
-# prefix=[SNES]
-# icon=C:\Games\Super Nintendo\icon.png
-# images directory=C:\Games\Super Nintendo\Images
-#
-[Nintendo Entertainment System]
-nickname=NES
-emulator=
+[NES]
+emulator=RetroArch_NES
+extensions=nes
+roms directory=G:\ROMs\NES
+images directory=G:\ROMs\NES\img
 
-[Super Nintendo]
-nickname=SNES
-emulator=
+[SNES]
+emulator=RetroArch_SNES
+extensions=smc,bml,smc
+roms directory=G:\ROMs\SNES
+images directory=G:\ROMs\SNES\img
 
 [Nintendo 64]
-nickname=N64
-emulator=
+emulator=RetroArch_N64
+extensions=z64,v64,n64,bin,u1,ndd
+roms directory=G:\ROMs\N64
+images directory=G:\ROMs\N64\img
 
-[Nintendo Gamecube]
-nickname=Gamecube
-emulator=
+[Gameboy]
+emulator=RetroArch_Gameboy
+extensions=gb,gbc,sgb
+roms directory=G:\ROMs\Gameboy
+images directory=G:\ROMs\Gameboy\img
 
-[Nintendo Wii]
-nickname=Wii
-emulator=
-
-[Playstation 1]
-nickname=PS1
-emulator=
-
-[Playstation 2]
-nickname=PS2
-emulator=
-
-[Sega Genesis]
-nickname=Genesis
-emulator=
-
-[Sega Dreamcast]
-nickname=Dreamcast
-emulator=
-
-[Nintendo Gameboy]
-nickname=Gameboy
-emulator=
+[Gameboy Color]
+emulator=RetroArch_GameboyColor
+extensions=gb,gbc,sgb
+roms directory=G:\ROMs\Gameboy color
+images directory=G:\ROMs\Gameboy color\img
 
 [Gameboy Advance]
-nickname=GBA
-emulator=
+emulator=RetroArch_GBA
+extensions=gba,gb,gbc
+roms directory=G:\ROMs\GBA
+images directory=G:\ROMs\GBA\img
 
-[Nintendo DS]
-nickname=DS
-emulator=
+[Gamecube]
+emulator=RetroArch_Gamecube
+extensions=iso,elf,gcm,dol,tgc,wbfs,ciso,gcz,wad
+roms directory=G:\ROMs\Gamecube
+images directory=G:\ROMs\Gamecube\img
+
+[Megadrive]
+emulator=RetroArch_SG
+extensions=bin,mdx,md,smd,gen,cue,iso,sms,gg,sg,68k,chd
+roms directory=G:\ROMs\Genesis
+images directory=G:\ROMs\Genesis\img
+
+[Master system]
+emulator=RetroArch_MS
+extensions=bin,mdx,md,smd,gen,cue,iso,sms,gg,sg,68k,chd
+roms directory=G:\ROMs\Master system
+images directory=G:\ROMs\Master system\img
+
+[PS1]
+emulator=RetroArch_PS1
+extensions=bin,cue,img,mdf,pbp,toc,cbn,m3u
+roms directory=G:\ROMs\PS1
+images directory=G:\ROMs\PS1\img
+
+[PS2]
+emulator=PCSX2_PS2
+extensions=iso,img,bin,mdf,z,z2,bz2,dump,cso,ima,gz
+roms directory=G:\ROMs\PS2
+images directory=G:\ROMs\PS2\img
+
+[PSP]
+emulator=RetroArch_PSP
+extensions=elf,iso,cso,prx,pbp
+roms directory=G:\ROMs\PSP
+images directory=G:\ROMs\PSP\img
+
+[Atari 2600]
+emulator=RetroArch_ATARI
+extensions=a26,bin
+roms directory=G:\ROMs\Atari 2600
+images directory=G:\ROMs\Atari 2600\img
+
+[Neo Geo]
+emulator=RetroArch_NEOGEO
+extensions=zip
+roms directory=G:\ROMs\Neo geo
+images directory=G:\ROMs\Neo geo\img
